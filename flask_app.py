@@ -11,4 +11,4 @@ def hello_world():
 
 @app.route('/urlend')
 def username():
-    return {"username": 'Kirito'}
+    return {"username": 'Kirito', "password": '20170526'}

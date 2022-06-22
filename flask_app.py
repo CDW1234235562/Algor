@@ -24,6 +24,3 @@ def population(sa2_code):
         return('that is a NSW SA2 code!, population is:', total_population)
     else:
         return('you type the wrong code!')
-
-
-population(101021007)

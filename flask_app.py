@@ -21,7 +21,7 @@ def population(sa2_code):
     for sa2_code in SA2_MAINCODE:
         if (SA2_MAINCODE == sa2_code):
             total_population = sa2.iloc[sa2_code, [3]]
-            return ('that is a NSW SA2 code!'+'population is' + total_population)
+            return ('that is a NSW SA2 code! '+' population is: ' + total_population)
 
         else:
             return 'you type the wrong code!'

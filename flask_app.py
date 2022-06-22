@@ -18,10 +18,12 @@ def hello_world():
 
 @app.route('/Tot_P_P/<sa2_code>')
 def population(sa2_code):
-    for sa2_code in SA2_MAINCODE:
-        if (SA2_MAINCODE == sa2_code):
-            total_population = sa2.iloc[sa2_code, [3]]
-            return ('that is a NSW SA2 code! '+' population is: ' + total_population)
+    if sa2_code in SA2_MAINCODE:
+        index = sa2[sa2["SA2_MAINCODE_2016"] == 101021007].index.tolist()[0]
+        total_population = sa2.iloc[index, [3]]
+        return('that is a NSW SA2 code!, population is:', total_population)
+    else:
+        return('you type the wrong code!')
 
-        else:
-            return 'you type the wrong code!'
+
+population(101021007)

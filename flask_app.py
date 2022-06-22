@@ -16,7 +16,7 @@ def hello_world():
     return 'Link start!'
 
 
-@app.route('/Tot_P_P/<sa2_code>')
+@app.route('/Tot_P_P/<int:sa2_code>')
 def population(sa2_code):
     if sa2_code in SA2_MAINCODE:
         index = sa2[sa2["SA2_MAINCODE_2016"] == 101021007].index.tolist()[0]

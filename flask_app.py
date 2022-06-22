@@ -2,8 +2,8 @@ from flask import Flask
 import rhino3dm as rhino
 import pandas as pd
 
-
-sa2 = pd.read_csv('2016Census_P01_NSW_SA2.csv')
+filepath = '/home/cdw1234235562/Algor/2016Census_P01_NSW_SA2.csv'
+sa2 = pd.read_csv(filepath)
 
 Tot_P_P = sa2['Tot_P_P']
 SA2_MAINCODE = sa2['SA2_MAINCODE_2016']

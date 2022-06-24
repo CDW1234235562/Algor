@@ -23,7 +23,7 @@ def hello_world():
     name="sa2_population",
     description="Get sa2 block population",
     inputs=[
-        hs.HopsNumber("Sa2_code", "Sa2_code", "Parameter on Curve to evaluate"),
+        hs.HopsNumber("Sa2_code", "Sa2_code", "sa2 main code 2016ver."),
     ],
     outputs=[
         hs.HopsNumber("Total_population", "Tot_P", "Total population on this SA2 block")

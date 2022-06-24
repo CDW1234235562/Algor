@@ -24,12 +24,12 @@ def hello_world():
     description="Get sa2 block population",
     inputs=[
         hs.HopsNumber("Sa2_code", "Sa2_code", "sa2 main code 2016ver."),
-    ],
+        ],
     outputs=[
         hs.HopsNumber("Total_population", "Tot_P", "Total population on this SA2 block")
     ]
 )
-def pointat(Sa2_code):
+def sa2_population(Sa2_code):
     if Sa2_code in SA2_MAINCODE:
         index = sa2[sa2["SA2_MAINCODE_2016"] == Sa2_code].index.tolist()[0]
         population = int(sa2.iloc[index, [3]])
